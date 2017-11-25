@@ -1,0 +1,53 @@
+
+<div class="module form-module">
+  
+  <div class="form" *ngIf="show_login">
+    <h2>Login to your account</h2>
+    <form>
+      <input type="text" placeholder="Username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <input type="password" placeholder="Password" [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <button (click)="login(username, pwd)">Login</button>
+      <div *ngIf="errors" class="alert alert-danger"> 
+        {{ errors }} 
+    </div>
+  <div class="btn"><a (click)="show_signup_section()">Register</a></div>
+  <div class="cta"><a (click)="forgot()">Forgot your password?</a></div>
+    </form>
+  </div>
+  <div class="form" *ngIf="show_signup">
+    <h2>Create an account</h2>
+    <form>
+      <!--<input type="text" placeholder="Username" [(ngModel)]=""/>-->
+      <input type="email" placeholder="Email Address" [(ngModel)]="sign_email" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <input type="password" placeholder="Password" [(ngModel)]="sign_pwd" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <input type="password" placeholder="Cnf-Password" [(ngModel)]="cnf_pwd" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <!--<input type="tel" placeholder="Phone Number" [(ngModel)]="mobilenumber"/>-->
+      <button (click)="signup(sign_email, sign_pwd, cnf_pwd)">Register</button>
+  <div class="btn"><a (click)="showlogin()">Signin</a></div>
+  <div *ngIf="errors" class="alert alert-danger"> 
+        {{ errors }} 
+    </div>
+
+    <div *ngIf="success" class="alert alert-success"> 
+        {{ success }} 
+    </div>
+    </form>
+  </div>
+  <div class="form" *ngIf="show_forgot">
+    <h2>Forgot Password?</h2>
+    <form>
+      <input type="email" placeholder="Email Address" [(ngModel)]="forgot_email" [ngModelOptions]="{standalone: true}" (ngModelChange)="reset()"/>
+      <button (click)="forgetUser(forgot_email)" (ngModelChange)="reset()">Submit</button>
+      <div class="btn"><a (click)="showlogin()">Signin</a></div>
+      <div *ngIf="errors" class="alert alert-danger"> 
+        {{ errors }} 
+    </div>
+
+    <div *ngIf="success" class="alert alert-success"> 
+        {{ success }} 
+    </div>
+    </form>
+  </div>
+
+
+</div>

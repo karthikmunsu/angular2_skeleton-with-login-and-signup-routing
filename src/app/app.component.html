@@ -1,0 +1,96 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>-->
+
+
+<!--<style type="text/css">
+.wrapper_head{  width: 40%; float: left;}
+.wrapper_head h2{ margin: 0 0 20px; text-transform: capitalize; }
+.video_wrapper{ width: 60%; float: left; padding: 0 5%;}
+.video_wrapper h2{ margin: 0 0 20px; text-transform: capitalize; }
+.video_wrapper video{ margin-bottom: 25px; }
+  .img-wrapper{
+    width: 48%;
+    display: inline-block;
+    float: left;
+    margin: 0 0 4% 4%;
+  }
+  .img-wrapper:nth-child(2n+1){ margin-left: 0; }
+.form_wrap{ padding: 25px 0; margin-top: 60px;}
+.up_form{ width: 50%; margin: 25px auto 50px; background: #dfdfdf; padding: 25px; text-align: center;}
+.up_form input[type=submit]{ background: #009fb1; color: #fff; font-weight: bold; border: 0; border-radius: 4px; padding: 5px 15px; margin: 10px auto; }
+.up_form input[type=file]{ width: 50%; margin: 0 auto;}
+.up_form input[type=file]:focus{ outline: none; }
+.up_form .preview_img{ width: 50%; margin: 10px auto;}
+.up_form .preview_img img{ width: 100%; }
+header{ background: #009fb1; padding: 25px 0; text-align: center; position: fixed; top: 0; left: 0; width: 100%;}
+header h1{ margin: 0; color: #fff; font-size: 26px; }
+</style>
+<header>
+    <div class="container">
+      <h1>Node JS Image and Video Upload</h1>
+    </div>
+  </header>
+<div class="container">
+  
+<div class="form_wrap clearfix">
+  <div class="up_form">
+    <form ref='uploadForm' 
+      id='uploadForm' 
+      action='http://45.33.67.24:3000/upload' 
+      method='post' 
+      encType="multipart/form-data">
+        <input type="file" name="sampleFile" multiple accept='image/*,audio/*,video/*' (change)="readUrl($event)"/>
+        <input type='submit' value='Upload!' (click)="refresh()" [disabled]="enable"/>
+    </form>
+    <div class="preview_img">
+      <!--<img src="http://45.33.67.24:3000/imgfile/?image=beautiful_nature_landscape_05_hd_picture_166223.jpg">-->
+      
+
+
+<!--<img [src]="url">
+    </div>    
+</div>
+<div class="wrapper_head">
+  <h2>Uploaded Images</h2>
+  <div class="wrapper clearfix">
+    <div *ngFor="let data of images" class="img-wrapper">
+    <img style="width:100%;" [src]="urlAppend(data)" class="img-rounded" alt="Cinque Terre" >
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="video_wrapper" style="text-align: center;">
+  <h2>video streaming example</h2>
+<video id="videoPlayer" controls style="width:100%;">
+  <source src="http://45.33.67.24:3000/video" type="video/mp4">
+</video>
+</div>
+</div>-->
+
+
+<router-outlet></router-outlet>
+
+
+
+
+
